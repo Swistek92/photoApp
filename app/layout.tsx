@@ -1,4 +1,4 @@
-import { Header } from "@components";
+import { Footer, Header } from "@components";
 import "./globals.css";
 import type { Metadata } from "next";
 // import { Roboto } from "next/font/google";
@@ -27,11 +27,11 @@ export default function RootLayout({
   return (
     <html lang='en' className=''>
       <body
-        className={`${inter.variable} font-sans w-full dark:bg-black dark:text-white`}
+        className={`${inter.variable} font-sans w-full text-white  dark:bg-black dark:text-white`}
       >
         <Header />
         <main>{children}</main>
-      
+        <Footer />
       </body>
     </html>
   );
