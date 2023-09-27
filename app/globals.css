@@ -2,6 +2,95 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-color: gray;
+@layer base {
+  html {
+    /* @apply bg-stone-600 text-white; */
+  }
+  h1 {
+    @apply mb-2 text-3xl font-bold;
+  }
+
+  h2 {
+    @apply mb-1 text-xl font-semibold;
+  }
+
+  p {
+    @apply text-base;
+  }
+
+  a {
+    @apply underline decoration-wavy underline-offset-4 text-blue-900 hover:text-purple-500 transition;
+  }
+
+  input,
+  select {
+    @apply m-1 p-1 text-slate-700  rounded-sm border border-slate-300 outline-none;
+  }
+
+  select {
+    @apply mr-2;
+  }
+
+  input[type="text"] {
+    /* @apply p-1 m-1 border border-slate-400 rounded-sm outline-none text-black; */
+  }
+  input[type="text"]:disabled {
+    @apply bg-slate-500/50;
+  }
+  input[type="text"]::placeholder {
+    @apply italic;
+  }
+
+  input[type="date"] {
+    /* @apply; */
+  }
+
+  input[type="checkbox"] {
+    @apply m-5;
+  }
+  input[type="checkbox"]:checked {
+    @apply accent-purple-500;
+  }
+
+  label {
+    @apply text-sm text-slate-800 font-medium leading-4;
+  }
+
+  header {
+    @apply fixed flex  items-center justify-between w-full h-10 bg-gray-400 dark:bg-gray-800 p-2;
+  }
+}
+
+@layer components {
+  .brand123 {
+    @apply bg-red-400 w-20 h-20 z-10 dark:bg-red-900;
+  }
+  .main {
+    @apply pt-10;
+  }
+  .btn {
+    @apply px-4 py-2 rounded-lg;
+  }
+
+  .btn:hover {
+    @apply transition duration-300 opacity-80;
+  }
+  .btn:disabled {
+    @apply bg-slate-400/20 text-black;
+  }
+  .btn:disabled:hover {
+    @apply opacity-100;
+  }
+
+  .btn-primary {
+    @apply bg-blue-500  text-white;
+  }
+
+  .btn-secoundary {
+    @apply bg-slate-500 text-white;
+  }
+
+  .Select {
+    @apply inline-block p-1 m-1 border border-gray-500 bg-white text-gray-700;
+  }
 }
